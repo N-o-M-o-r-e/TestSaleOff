@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProUgrande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginEnd="105dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Pro Upgrade"
+        android:fontFamily="@font/roboto_inter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="33dp"/>
+
+        <ImageView
+        android:id="@+id/imgPlan"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/plan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvProUgrande" />
+
+
+    <ImageView
+        android:id="@+id/imgFrame"
+        android:layout_width="280dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginRight="43dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPlan"
+        />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Offer ends in"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBottom_toTopOf="@+id/tvMinute"
+            android:layout_marginBottom="12dp"
+            />
+
+    <TextView
+        android:id="@+id/tvHour"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:text="10"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:fontFamily="@font/font_sf"
+        android:background="@drawable/time"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvMinute" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinude"
+        app:layout_constraintStart_toEndOf="@+id/tvHour"
+        app:layout_constraintEnd_toStartOf="@+id/tvMinute"
+        />
+    <TextView
+        android:id="@+id/tvMinute"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:text="10"
+        android:fontFamily="@font/font_sf"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:background="@drawable/time"
+        app:layout_constraintEnd_toStartOf="@+id/tvSecond"
+        app:layout_constraintStart_toEndOf="@id/tvHour"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinude" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dot"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinude"
+        app:layout_constraintStart_toEndOf="@+id/tvMinute"
+        app:layout_constraintEnd_toStartOf="@+id/tvSecond"
+        />
+    <TextView
+        android:id="@+id/tvSecond"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:background ="@drawable/time"
+        android:text="10"
+        android:fontFamily="@font/font_sf"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvMinute"/>
+
+
+    <Button
+        android:id="@+id/btnContinude"
+        android:layout_width="327dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/background_buton"
+        android:text="@string/continude"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/Tag_term_of_use"
+            android:layout_margin="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:background="@drawable/tag_term_of_use"/>
+        <ImageView
+            android:id="@+id/Tag_restore"
+            android:layout_margin="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_restore"
+            android:scaleType="center"
+            />
+        <ImageView
+            android:id="@+id/Tag_privacy_policy"
+            android:layout_margin="28dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_privacy_policy"
+            android:scaleType="center"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
